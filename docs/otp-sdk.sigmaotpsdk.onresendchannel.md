@@ -7,7 +7,7 @@
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
-Подписывается на событие 
+Подписывается на событие [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
 **Signature:**
 
@@ -24,13 +24,13 @@ onResendChannel(requestId: string, handler: (...args: SigmaOtpSDKGlobalEvents[Si
 			[x: `channel-changed-${string}`]: [
 				{
 					requestId: string;
-					error: ChannelChangedException;
+					error: Exceptions.ChannelChangedException;
 				}
 			];
 			[x: `resend-channel-${string}`]: [
 				{
 					requestId: string;
-					error: ResendChannelException;
+					error: Exceptions.ResendChannelException;
 				}
 			];
 			[x: `success-confirmation-${string}`]: [
@@ -103,5 +103,5 @@ handler
 </tbody></table>
 **Returns:**
 
-{ unsubscribe: () =&gt; import("events")&lt;SigmaOtpSDKGlobalEvents &amp; { \[x: \`error-${string}\`\]: \[ { requestId: string; error: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; \[x: \`channel-changed-${string}\`\]: \[ { requestId: string; error: ChannelChangedException; } \]; \[x: \`resend-channel-${string}\`\]: \[ { requestId: string; error: ResendChannelException; } \]; \[x: \`success-confirmation-${string}\`\]: \[ { requestId: string; } \]; } &amp; { "handled-error": \[ { requestId: string; error?: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; }&gt;; }
+{ unsubscribe: () =&gt; import("events")&lt;SigmaOtpSDKGlobalEvents &amp; { \[x: \`error-${string}\`\]: \[ { requestId: string; error: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; \[x: \`channel-changed-${string}\`\]: \[ { requestId: string; error: [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)<!-- -->; } \]; \[x: \`resend-channel-${string}\`\]: \[ { requestId: string; error: [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)<!-- -->; } \]; \[x: \`success-confirmation-${string}\`\]: \[ { requestId: string; } \]; } &amp; { "handled-error": \[ { requestId: string; error?: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; }&gt;; }
 

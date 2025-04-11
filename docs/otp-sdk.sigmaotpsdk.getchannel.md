@@ -58,15 +58,23 @@ Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.SessionClosedException](./otp-sdk.exceptions.sessionclosedexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
-Вызывается для получения данных о текущем канала аутентификации. Должен вызваться при возникновнии ошибки .
+Вызывается для получения данных о текущем канала аутентификации. Должен вызваться при возникновнии ошибки [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)<!-- -->.
 

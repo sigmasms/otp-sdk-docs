@@ -238,6 +238,8 @@ Description
 
 </td><td>
 
+Все исключения используемые в sdk
+
 
 </td></tr>
 </tbody></table>

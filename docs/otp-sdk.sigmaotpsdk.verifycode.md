@@ -74,21 +74,31 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.SessionClosedException](./otp-sdk.exceptions.sessionclosedexception.md)
 
+[Exceptions.IsCodelessChannelException](./otp-sdk.exceptions.iscodelesschannelexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
-Вызывается для проверки кода в кодовом канале, при попытке вызвать метод при текущем безкодовом канале будет ошибка .
+Вызывается для проверки кода в кодовом канале, при попытке вызвать метод при текущем безкодовом канале будет ошибка [Exceptions.IsCodelessChannelException](./otp-sdk.exceptions.iscodelesschannelexception.md)<!-- -->.
 
-Должен вызываться только при статусе текущего канала  иначе вернёт ошибку .
+Должен вызываться только при статусе текущего канала  иначе вернёт ошибку [Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)<!-- -->.
 
-При неверном коде возвращает ошибку .
+При неверном коде возвращает ошибку [Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)<!-- -->.
 

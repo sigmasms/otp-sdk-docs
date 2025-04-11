@@ -73,13 +73,21 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.PhoneNumberMismatchException](./otp-sdk.exceptions.phonenumbermismatchexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 

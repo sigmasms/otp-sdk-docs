@@ -74,10 +74,17 @@ Promise&lt;[IOtpSendData](./otp-sdk.iotpsenddata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.RateLimitException](./otp-sdk.exceptions.ratelimitexception.md)
 
+[Exceptions.WidgetIsBlockedException](./otp-sdk.exceptions.widgetisblockedexception.md)
 
+[Exceptions.WidgetNotFoundException](./otp-sdk.exceptions.widgetnotfoundexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 

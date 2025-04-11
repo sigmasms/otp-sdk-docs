@@ -55,16 +55,25 @@ Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.SessionClosedException](./otp-sdk.exceptions.sessionclosedexception.md)
 
+[Exceptions.LongPollingTimeoutException](./otp-sdk.exceptions.longpollingtimeoutexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
-Это LongPolling вариант запроса [SigmaOtpSDK.getChannel()](./otp-sdk.sigmaotpsdk.getchannel.md) и отличается тем, что ждёт пока какая либа информация о канале не обновится. Возвращает ошибку  при которой надо выполнить запрос заново.
+Это LongPolling вариант запроса [SigmaOtpSDK.getChannel()](./otp-sdk.sigmaotpsdk.getchannel.md) и отличается тем, что ждёт пока какая либа информация о канале не обновится. Возвращает ошибку [Exceptions.LongPollingTimeoutException](./otp-sdk.exceptions.longpollingtimeoutexception.md) при которой надо выполнить запрос заново.
 

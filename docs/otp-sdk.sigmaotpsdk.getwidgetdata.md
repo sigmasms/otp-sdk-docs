@@ -58,7 +58,11 @@ Promise&lt;[IOtpWidgetData](./otp-sdk.iotpwidgetdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.WidgetNotFoundException](./otp-sdk.exceptions.widgetnotfoundexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
