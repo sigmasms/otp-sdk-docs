@@ -73,18 +73,29 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.SessionClosedException](./otp-sdk.exceptions.sessionclosedexception.md)
 
+[Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)
 
+[Exceptions.PhoneNumberMismatchException](./otp-sdk.exceptions.phonenumbermismatchexception.md)
 
+[Exceptions.LongPollingTimeoutException](./otp-sdk.exceptions.longpollingtimeoutexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
-Это LongPolling вариант запроса [SigmaOtpSDK.checkStatus()](./otp-sdk.sigmaotpsdk.checkstatus.md) и отличается тем, что ждёт пока статус аутентификации станет успешным. Возвращает ошибку  при которой надо выполнить запрос заново.
+Это LongPolling вариант запроса [SigmaOtpSDK.checkStatus()](./otp-sdk.sigmaotpsdk.checkstatus.md) и отличается тем, что ждёт пока статус аутентификации станет успешным. Возвращает ошибку [Exceptions.LongPollingTimeoutException](./otp-sdk.exceptions.longpollingtimeoutexception.md) при которой надо выполнить запрос заново.
 

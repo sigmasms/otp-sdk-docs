@@ -183,7 +183,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие 
+**_(BETA)_** Подписывается на событие [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)
 
 
 </td></tr>
@@ -211,7 +211,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие 
+**_(BETA)_** Подписывается на событие [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
 
 </td></tr>

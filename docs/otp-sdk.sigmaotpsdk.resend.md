@@ -58,21 +58,31 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.RestartCooldownActiveException](./otp-sdk.exceptions.restartcooldownactiveexception.md)
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
+[Exceptions.SessionAlreadyConfirmedException](./otp-sdk.exceptions.sessionalreadyconfirmedexception.md)
 
+[Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
+[Exceptions.AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
 
+[Exceptions.NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
-Может вызваться для перезапуска канала или запуска следующего канала. Должен вызваться при возникновении ошибки .
+Может вызваться для перезапуска канала или запуска следующего канала. Должен вызваться при возникновении ошибки [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)<!-- -->.
 
-Если не было ошибки , то данный метод можно вызвать только после истечения определённого времени. Если время для перезапуска не истекло, то будет ошибка .
+Если не было ошибки [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)<!-- -->, то данный метод можно вызвать только после истечения определённого времени. Если время для перезапуска не истекло, то будет ошибка [Exceptions.RestartCooldownActiveException](./otp-sdk.exceptions.restartcooldownactiveexception.md)<!-- -->.
 
 После успешного завершения метода необходимо вызвать метод [SigmaOtpSDK.getChannel()](./otp-sdk.sigmaotpsdk.getchannel.md) для того, что бы получить данные нового канала.
 

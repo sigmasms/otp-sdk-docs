@@ -4,8 +4,256 @@
 
 ## Exceptions namespace
 
+Все исключения используемые в sdk
+
 **Signature:**
 
 ```typescript
-declare namespace Exceptions 
+export declare namespace Exceptions 
 ```
+
+## Classes
+
+<table><thead><tr><th>
+
+Class
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[AttemptsExpiredException](./otp-sdk.exceptions.attemptsexpiredexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Количество попыток ввода закончилось
+
+
+</td></tr>
+<tr><td>
+
+[CaptchaNotConfirmedException](./otp-sdk.exceptions.captchanotconfirmedexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Капча не подтверждена
+
+
+</td></tr>
+<tr><td>
+
+[ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Канал изменён, требуется получить канал заново.
+
+
+</td></tr>
+<tr><td>
+
+[CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Forbidden exception
+
+
+</td></tr>
+<tr><td>
+
+[InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Внутрення ошибка сервера
+
+
+</td></tr>
+<tr><td>
+
+[InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Переданный код неверный
+
+
+</td></tr>
+<tr><td>
+
+[IsCodelessChannelException](./otp-sdk.exceptions.iscodelesschannelexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Текущий канал безкодовый
+
+
+</td></tr>
+<tr><td>
+
+[LongPollingTimeoutException](./otp-sdk.exceptions.longpollingtimeoutexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Истек timeout long-polling запроса
+
+
+</td></tr>
+<tr><td>
+
+[NoAvailableChannelsException](./otp-sdk.exceptions.noavailablechannelsexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Нет подходящих каналов для отправки
+
+
+</td></tr>
+<tr><td>
+
+[NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Ошибка подключения к SIGMA API
+
+
+</td></tr>
+<tr><td>
+
+[OtpException](./otp-sdk.exceptions.otpexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Базовый класс для исключений
+
+
+</td></tr>
+<tr><td>
+
+[PhoneNumberMismatchException](./otp-sdk.exceptions.phonenumbermismatchexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Номер телефона не совпадает с привязанным к текущей сессии.
+
+
+</td></tr>
+<tr><td>
+
+[RateLimitException](./otp-sdk.exceptions.ratelimitexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Ошибка RateLimit
+
+
+</td></tr>
+<tr><td>
+
+[ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Текущий канал дожлен быть перезапущен
+
+
+</td></tr>
+<tr><td>
+
+[RestartCooldownActiveException](./otp-sdk.exceptions.restartcooldownactiveexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Время до перезапуска ещё не истекло
+
+
+</td></tr>
+<tr><td>
+
+[SessionAlreadyConfirmedException](./otp-sdk.exceptions.sessionalreadyconfirmedexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Сессия уже подтверждена
+
+
+</td></tr>
+<tr><td>
+
+[SessionClosedException](./otp-sdk.exceptions.sessionclosedexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Сессия уже завершена
+
+
+</td></tr>
+<tr><td>
+
+[SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Сессия не найдена
+
+
+</td></tr>
+<tr><td>
+
+[ValidateError](./otp-sdk.exceptions.validateerror.md)
+
+
+</td><td>
+
+**_(BETA)_** Ошибка валидации
+
+
+</td></tr>
+<tr><td>
+
+[WidgetIsBlockedException](./otp-sdk.exceptions.widgetisblockedexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Виджет заблокирован
+
+
+</td></tr>
+<tr><td>
+
+[WidgetNotFoundException](./otp-sdk.exceptions.widgetnotfoundexception.md)
+
+
+</td><td>
+
+**_(BETA)_** Виджет с таким ID не найден
+
+
+</td></tr>
+</tbody></table>

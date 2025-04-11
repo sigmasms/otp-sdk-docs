@@ -73,9 +73,13 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 ## Exceptions
 
+[Exceptions.SessionNotFoundException](./otp-sdk.exceptions.sessionnotfoundexception.md)
 
+[Exceptions.NoConnectionException](./otp-sdk.exceptions.noconnectionexception.md)
 
+[Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
+[Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
 
 ## Remarks
 
