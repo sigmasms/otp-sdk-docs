@@ -20,15 +20,12 @@ npm install @sigmamessaging/otp-sdk
 ```
 
 ## Быстрая интеграция
-Добавьте [виджет](https://www.npmjs.com/package/@sigmamessaging/otp-widget) на свой Frontend.
+1. Добавьте [виджет](https://www.npmjs.com/package/@sigmamessaging/otp-widget) на свой Frontend.
+2. Импортируйте SDK и используйте предоставленные контроллеры для [NestJS](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.nestjssigmaotpmodule.md), [Express](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.registerexpressroutes.md), [Fastify](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.registerfastifyroutes.md), [Bun](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.bunjsrouteregistry.md).
+3. Добавьте в Backend финальную проверку статуса и завершение процесса аутентификации вызвав команду [checkStatusAndComplete](https://github.com/sigmasms/otp-sdk-docss/blob/main/docs/otp-sdk.sigmaotpsdk.checkstatusandcomplete.md).
 
-Импортируйте SDK и используйте предоставленные контроллеры для [NestJS](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.nestjssigmaotpmodule.md), [Express](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.registerexpressroutes.md), [Fastify](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.registerfastifyroutes.md), [Bun](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.bunjsrouteregistry.md).
-
-И добавьте в Backend финальную проверку статуса и завершение процесса аутентификации вызвав команду [checkStatusAndComplete](https://github.com/sigmasms/otp-sdk-docss/blob/main/docs/otp-sdk.sigmaotpsdk.checkstatusandcomplete.md).
-
-[Подробная документация](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.md)
-
-[Подключение виджета](https://www.npmjs.com/package/@sigmamessaging/otp-widget)
+- [Подробная документация](https://github.com/sigmasms/otp-sdk-docs/blob/main/docs/otp-sdk.md)
+- [Подключение виджета](https://www.npmjs.com/package/@sigmamessaging/otp-widget)
 
 ### Пример с Express:
 
@@ -39,7 +36,11 @@ import { registerExpressRoutes } from '@sigmamessaging/otp-sdk';
 const app = express();
 app.use(express.json());
 
-registerExpressRoutes(app, 'your_form_id');
+registerExpressRoutes(app, {
+  apiToken: API_TOKEN,
+  apiUrl: `${API_BASE_URL}/api/n/otp-handler`,
+  environment: SigmaOtpSDKEnvironmentEnum.production
+});
 
 app.listen(3000, () => {
     console.log(`Server running on port 3000`);
