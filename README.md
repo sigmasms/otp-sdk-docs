@@ -31,7 +31,10 @@ npm install @sigmamessaging/otp-sdk
 
 ```javascript
 import express from 'express';
-import { registerExpressRoutes } from '@sigmamessaging/otp-sdk';
+import {
+  registerExpressRoutes,
+  SigmaOtpSDKEnvironmentEnum
+} from '@sigmamessaging/otp-sdk';
 
 const app = express();
 app.use(express.json());
