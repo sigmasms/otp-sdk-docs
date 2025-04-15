@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sigma Messaging OTP Demo</title>
+    <script>
+      /**
+       * Настраиваем виджет
+       */
+      window.OTP_WIDGETS = [
+        {
+          // В этом демо ID виджета заполняется в index.js
+          widgetId: "WIDGET_ID",
+          containerId: "otp-widget",
+        },
+      ];
+    </script>
+  </head>
+
+  <body>
+    <div id="otp-widget"></div>
+
+    <form id="form" method="post" action="/formSubmit">
+      <input name="requestId" id="requestId" />
+      <input name="recipient" id="recipient" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!--
+        Скрипт лучше указывать в конце HTML чтобы необходимые элементы
+        уже были созданы на странице к моменту подключения
+    -->
+    <script src="https://unpkg.com/@sigmamessaging/otp-widget@latest/otp-widget.umd.js"></script>
+    <script>
+      const containerId = window.OTP_WIDGETS[0].containerId;
+      const otpWidget = document.getElementById(containerId);
+      otpWidget.addEventListener("code:check", (event) => {
+        const { requestId, recipient, status } = event.detail[0];
+
+        const requestIdInput = document.getElementById("requestId");
+        const recipientInput = document.getElementById("recipient");
+
+        requestIdInput.value = requestId;
+        recipientInput.value = recipient;
+      });
+      const form = document.getElementById("form");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const result = await fetch("/formSubmit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            requestId: requestIdInput.value,
+            recipient: recipientInput.value,
+          }),
+        });
+        const data = await result.json();
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
