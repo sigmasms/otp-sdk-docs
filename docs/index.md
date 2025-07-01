@@ -19,7 +19,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[@sigmasms/otp-sdk](./otp-sdk.md)
+[@sigmamessaging/otp-sdk](./otp-sdk.md)
 
 
 </td><td>
