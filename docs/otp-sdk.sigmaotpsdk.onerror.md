@@ -91,7 +91,7 @@ handler
 
 </td><td>
 
-(...args: SigmaOtpSDKGlobalEvents\[SigmaOtpSDKGlobalEventNames.ERROR\]) =&gt; void
+(...args: [SigmaOtpSDKGlobalEvents](./otp-sdk.sigmaotpsdkglobalevents.md)<!-- -->\[[SigmaOtpSDKGlobalEventNames.ERROR](./otp-sdk.sigmaotpsdkglobaleventnames.md)<!-- -->\]) =&gt; void
 
 
 </td><td>
@@ -101,7 +101,8 @@ handler
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
-{ unsubscribe: () =&gt; import("events")&lt;SigmaOtpSDKGlobalEvents &amp; { \[x: \`error-${string}\`\]: \[ { requestId: string; error: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; \[x: \`channel-changed-${string}\`\]: \[ { requestId: string; error: [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)<!-- -->; } \]; \[x: \`resend-channel-${string}\`\]: \[ { requestId: string; error: [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)<!-- -->; } \]; \[x: \`success-confirmation-${string}\`\]: \[ { requestId: string; } \]; } &amp; { "handled-error": \[ { requestId: string; error?: [IError](./otp-sdk.ierror.md)<!-- -->; rawError?: unknown; } \]; }&gt;; }
+{ unsubscribe: () =&gt; import("events")&lt;[SigmaOtpSDKGlobalEvents](./otp-sdk.sigmaotpsdkglobalevents.md) &amp; { \[x: \`error-${string}\`\]: \[ { requestId: string; error: [IError](./otp-sdk.ierror.md) \| import("@nestjs/common").HttpException; rawError?: unknown; } \]; \[x: \`channel-changed-${string}\`\]: \[ { requestId: string; error: [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)<!-- -->; } \]; \[x: \`resend-channel-${string}\`\]: \[ { requestId: string; error: [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)<!-- -->; } \]; \[x: \`success-confirmation-${string}\`\]: \[ { requestId: string; } \]; } &amp; { "handled-error": \[ { requestId: string; error?: [IError](./otp-sdk.ierror.md)<!-- -->; rawError?: unknown; } \]; }&gt;; }
 

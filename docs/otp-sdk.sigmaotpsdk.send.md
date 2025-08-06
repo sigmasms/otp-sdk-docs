@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-send(widgetId: string, recipient: string, captchaToken: string): Promise<IOtpSendData>;
+send(widgetId: string, recipient: string, userIp: string, captchaToken?: string): Promise<IOtpSendData>;
 ```
 
 ## Parameters
@@ -67,6 +67,22 @@ string
 </td></tr>
 <tr><td>
 
+userIp
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+ip пользователя
+
+
+</td></tr>
+<tr><td>
+
 captchaToken
 
 
@@ -77,11 +93,12 @@ string
 
 </td><td>
 
-token for captcha
+_(Optional)_ токен из каптчи
 
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[IOtpSendData](./otp-sdk.iotpsenddata.md)<!-- -->&gt;
@@ -103,4 +120,6 @@ Promise&lt;[IOtpSendData](./otp-sdk.iotpsenddata.md)<!-- -->&gt;
 [Exceptions.InternalServerErrorException](./otp-sdk.exceptions.internalservererrorexception.md)
 
 [Exceptions.CommonForbiddenException](./otp-sdk.exceptions.commonforbiddenexception.md)
+
+[Exceptions.CaptchaNotConfirmedException](./otp-sdk.exceptions.captchanotconfirmedexception.md)
 

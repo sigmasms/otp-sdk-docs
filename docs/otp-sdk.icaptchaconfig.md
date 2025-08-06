@@ -2,107 +2,29 @@
 
 [Home](./index.md) &gt; [@sigmamessaging/otp-sdk](./otp-sdk.md) &gt; [ICaptchaConfig](./otp-sdk.icaptchaconfig.md)
 
-## ICaptchaConfig interface
+## ICaptchaConfig type
+
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 
+
+Настройки каптчи
 
 **Signature:**
 
 ```typescript
-export interface ICaptchaConfig 
+export type ICaptchaConfig = {
+	provider: CaptchaProvider.google;
+	captchaFirstFreeRequestsPerIp?: number;
+	config: IGoogleCaptchaConfig;
+} | {
+	provider: CaptchaProvider.yandex;
+	captchaFirstFreeRequestsPerIp?: number;
+	config: IYandexCaptchaConfig;
+} | {
+	provider: CaptchaProvider.cloudflare;
+	captchaFirstFreeRequestsPerIp?: number;
+	config: ICloudflareCaptchaConfig;
+};
 ```
+**References:** [CaptchaProvider.google](./otp-sdk.captchaprovider.md)<!-- -->, [IGoogleCaptchaConfig](./otp-sdk.igooglecaptchaconfig.md)<!-- -->, [CaptchaProvider.yandex](./otp-sdk.captchaprovider.md)<!-- -->, [IYandexCaptchaConfig](./otp-sdk.iyandexcaptchaconfig.md)<!-- -->, [CaptchaProvider.cloudflare](./otp-sdk.captchaprovider.md)<!-- -->, [ICloudflareCaptchaConfig](./otp-sdk.icloudflarecaptchaconfig.md)
 
-## Properties
-
-<table><thead><tr><th>
-
-Property
-
-
-</th><th>
-
-Modifiers
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-[enabled?](./otp-sdk.icaptchaconfig.enabled.md)
-
-
-</td><td>
-
-
-</td><td>
-
-boolean
-
-
-</td><td>
-
-_(Optional)_
-
-
-</td></tr>
-<tr><td>
-
-[minScore?](./otp-sdk.icaptchaconfig.minscore.md)
-
-
-</td><td>
-
-
-</td><td>
-
-number
-
-
-</td><td>
-
-_(Optional)_ Only for reCAPTCHA v3
-
-
-</td></tr>
-<tr><td>
-
-[provider](./otp-sdk.icaptchaconfig.provider.md)
-
-
-</td><td>
-
-
-</td><td>
-
-[CaptchaProvider](./otp-sdk.captchaprovider.md)
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[secret](./otp-sdk.icaptchaconfig.secret.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-
-</td></tr>
-</tbody></table>

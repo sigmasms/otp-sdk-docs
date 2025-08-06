@@ -53,7 +53,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[(constructor)(settings)](./otp-sdk.bunjsrouteregistry._constructor_.md)
+[(constructor)(settings, sigmaOtpSdk)](./otp-sdk.bunjsrouteregistry._constructor_.md)
 
 
 </td><td>
@@ -99,32 +99,5 @@ Description
 
 
 </td></tr>
-<tr><td>
-
-[matchUrlWithPattern(url, pattern)](./otp-sdk.bunjsrouteregistry.matchurlwithpattern.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_**
-
-
-</td></tr>
-<tr><td>
-
-[register(method, path, handler)](./otp-sdk.bunjsrouteregistry.register.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_**
-
-
-</td></tr>
 </tbody></table>
+

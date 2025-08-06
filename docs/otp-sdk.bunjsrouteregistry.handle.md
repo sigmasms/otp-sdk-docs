@@ -7,6 +7,7 @@
 > This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
+
 **Signature:**
 
 ```typescript
@@ -38,7 +39,7 @@ request
 
 </td><td>
 
-BunJSRequestWithParams
+[BunJSRequestWithParams](./otp-sdk.bunjsrequestwithparams.md)
 
 
 </td><td>
@@ -46,6 +47,7 @@ BunJSRequestWithParams
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;Response \| undefined&gt;

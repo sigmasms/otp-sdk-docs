@@ -70,7 +70,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[register(settings)](./otp-sdk.nestjssigmaotpmodule.register.md)
+[register(settings, sigmaOtpSdk)](./otp-sdk.nestjssigmaotpmodule.register.md)
 
 
 </td><td>
@@ -101,3 +101,4 @@ Description
 
 </td></tr>
 </tbody></table>
+

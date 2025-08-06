@@ -40,7 +40,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[message?](./otp-sdk.ierror.message.md)
+[message](./otp-sdk.ierror.message.md)
 
 
 </td><td>
@@ -53,7 +53,7 @@ string
 
 </td><td>
 
-**_(BETA)_** _(Optional)_
+**_(BETA)_** Сообщение об ошибке
 
 
 </td></tr>
@@ -67,12 +67,12 @@ string
 
 </td><td>
 
-object
+unknown
 
 
 </td><td>
 
-**_(BETA)_** _(Optional)_
+**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
 
 
 </td></tr>
@@ -91,8 +91,9 @@ object
 
 </td><td>
 
-**_(BETA)_**
+**_(BETA)_** Тип ошибки
 
 
 </td></tr>
 </tbody></table>
+

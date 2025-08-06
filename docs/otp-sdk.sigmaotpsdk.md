@@ -17,38 +17,73 @@ export declare class SigmaOtpSDK
 
 ## Example 1
 
-Инициализация процесса аутентификации и отправка кода
+Инициализация SDK
 
 ```typescript
-import { SigmaOtpSDK } from '@sigma-otp-sdk';
+import { SigmaOtpSDK, SigmaOtpSDKEnvironmentEnum } from '@sigma-otp-sdk';
 
+// Создание экземпляра SDK
 const client = new SigmaOtpSDK({
- environment: 'production',
- apiToken: "your_api_token",
- apiUrl: "api_url"
+  environment: SigmaOtpSDKEnvironmentEnum.production,
+  apiToken: "your_api_token",
+  apiUrl: "https://api.example.com",
+  // Опционально: настройки логгера
+  logger: {
+    debug: (message, ...params) => console.debug(message, ...params),
+    error: (message, ...params) => console.error(message, ...params)
+  }
 });
-
-const requestId = await client.send('widget_id', 'phone_number');
 ```
 
 ## Example 2
 
-Получение текущего канала и подтверждение кода
+Запуск аутентификации и получение канала
 
 ```typescript
-const channel = await client.getChannel(requestId);
+try {
+  // Запуск процесса аутентификации
+  const { requestId } = await client.send(
+    'widget_id',
+    '+79001234567',
+    '192.168.1.1' // IP пользователя
+  );
 
-if (channel.channelType === 'code') {
- await client.verifyCode(requestId, '1234');
+  // Получение информации о текущем канале
+  const channel = await client.getChannel(requestId);
+
+  console.log(`Канал аутентификации: ${channel.type}, статус: ${channel.status}`);
+  console.log(`Осталось попыток: ${channel.remainingCodeAttempts}`);
+} catch (error) {
+  console.error('Ошибка при запуске аутентификации:', error);
 }
 ```
+\*
 
 ## Example 3
 
-Проверка статуса и завершение процесса аутентификации
+Завершение процесса аутентификации и подписка на события
 
 ```typescript
-const status = await client.checkStatusAndComplete(requestId);
+// Подписка на событие успешного подтверждения
+const subscription = client.onSuccessConfirmation(requestId, ({ requestId }) => {
+  console.log(`Аутентификация успешно завершена для запроса ${requestId}`);
+});
+
+// Проверка статуса и завершение процесса
+try {
+  const status = await client.checkStatusAndComplete(requestId, '+79001234567');
+
+  if (status.success) {
+    console.log('Аутентификация успешно завершена');
+  } else {
+    console.log('Аутентификация не завершена');
+  }
+
+  // Отписка от события, когда оно больше не нужно
+  subscription.unsubscribe();
+} catch (error) {
+  console.error('Ошибка при проверке статуса:', error);
+}
 ```
 
 ## Constructors
@@ -147,20 +182,6 @@ Description
 </td></tr>
 <tr><td>
 
-[configureCaptcha(config)](./otp-sdk.sigmaotpsdk.configurecaptcha.md)
-
-
-</td><td>
-
-
-</td><td>
-
-**_(BETA)_** Конфигурация для captcha
-
-
-</td></tr>
-<tr><td>
-
 [getChannel(requestId)](./otp-sdk.sigmaotpsdk.getchannel.md)
 
 
@@ -175,7 +196,7 @@ Description
 </td></tr>
 <tr><td>
 
-[getWidgetData(widgetId)](./otp-sdk.sigmaotpsdk.getwidgetdata.md)
+[getWidgetData(widgetId, userIp)](./otp-sdk.sigmaotpsdk.getwidgetdata.md)
 
 
 </td><td>
@@ -259,7 +280,7 @@ Description
 </td></tr>
 <tr><td>
 
-[send(widgetId, recipient, captchaToken)](./otp-sdk.sigmaotpsdk.send.md)
+[send(widgetId, recipient, userIp, captchaToken)](./otp-sdk.sigmaotpsdk.send.md)
 
 
 </td><td>
@@ -268,6 +289,20 @@ Description
 </td><td>
 
 **_(BETA)_** Запускает процесс аутентификации
+
+
+</td></tr>
+<tr><td>
+
+[setApiToken(apiToken)](./otp-sdk.sigmaotpsdk.setapitoken.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** Позволяет поменять apiToken во время работы
 
 
 </td></tr>
@@ -295,7 +330,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Возвращает текущий канал после смены статуса на 
+**_(BETA)_** Возвращает текущий канал после смены статуса на [EOtpHandlerChannelStatus.sent](./otp-sdk.eotphandlerchannelstatus.md)
 
 
 </td></tr>
@@ -314,3 +349,4 @@ Description
 
 </td></tr>
 </tbody></table>
+

@@ -10,16 +10,17 @@
 **Signature:**
 
 ```typescript
-static register(settings: ISigmaOtpSDKControllersSettings): {
+static register(settings: ISigmaOtpSDKControllersSettings, sigmaOtpSdk: SigmaOtpSDK): {
 		module: typeof NestJSSigmaOtpModule;
 		controllers: {
 			new (): {
 				sigmaOtpSDK: SigmaOtpSDK;
-				getWidget(widgetId: string): Promise<IOtpWidgetData>;
-				sendOtp(body: {
+				getClientIp: IGetClientIp;
+				getWidget(request: Request, widgetId: string): Promise<IOtpWidgetData>;
+				sendOtp(request: import("fastify").FastifyRequest, body: {
 					widgetId: string;
 					recipient: string;
-					captchaToken: string;
+					captchaToken?: string;
 				}): Promise<IOtpSendData>;
 				resend(requestId: string): Promise<IOtpGetStatusData>;
 				getChannel(requestId: string): Promise<IOtpChannelData>;
@@ -60,7 +61,21 @@ settings
 
 </td><td>
 
-ISigmaOtpSDKControllersSettings
+[ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sigmaOtpSdk
+
+
+</td><td>
+
+[SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)
 
 
 </td><td>
@@ -68,7 +83,8 @@ ISigmaOtpSDKControllersSettings
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
-{ module: typeof [NestJSSigmaOtpModule](./otp-sdk.nestjssigmaotpmodule.md)<!-- -->; controllers: { new (): { sigmaOtpSDK: [SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)<!-- -->; getWidget(widgetId: string): Promise&lt;[IOtpWidgetData](./otp-sdk.iotpwidgetdata.md)<!-- -->&gt;; sendOtp(body: { widgetId: string; recipient: string; captchaToken: string; }): Promise&lt;[IOtpSendData](./otp-sdk.iotpsenddata.md)<!-- -->&gt;; resend(requestId: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; getChannel(requestId: string): Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;; waitForChannelSelected(requestId: string): Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;; checkStatus(requestId: string, recipient: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; waitForSuccessStatus(requestId: string, recipient: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; verifyCode(requestId: string, body: { code: string; }): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; completeRequest(requestId: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; }; }\[\]; }
+{ module: typeof [NestJSSigmaOtpModule](./otp-sdk.nestjssigmaotpmodule.md)<!-- -->; controllers: { new (): { sigmaOtpSDK: [SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)<!-- -->; getClientIp: [IGetClientIp](./otp-sdk.igetclientip.md)<!-- -->; getWidget(request: Request, widgetId: string): Promise&lt;[IOtpWidgetData](./otp-sdk.iotpwidgetdata.md)<!-- -->&gt;; sendOtp(request: import("fastify").FastifyRequest, body: { widgetId: string; recipient: string; captchaToken?: string; }): Promise&lt;[IOtpSendData](./otp-sdk.iotpsenddata.md)<!-- -->&gt;; resend(requestId: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; getChannel(requestId: string): Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;; waitForChannelSelected(requestId: string): Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;; checkStatus(requestId: string, recipient: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; waitForSuccessStatus(requestId: string, recipient: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; verifyCode(requestId: string, body: { code: string; }): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; completeRequest(requestId: string): Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;; }; }\[\]; }
 

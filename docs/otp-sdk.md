@@ -4,6 +4,24 @@
 
 ## otp-sdk package
 
+SDK для сервиса аутентификации SIGMA
+
+## Remarks
+
+Класс SDK [SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)
+
+Классы исключений [Exceptions](./otp-sdk.exceptions.md)
+
+Контроллеры для регистрации маршрутов:
+
+- NestJS [NestJSSigmaOtpModule](./otp-sdk.nestjssigmaotpmodule.md)
+
+- BunJS [BunJSRouteRegistry](./otp-sdk.bunjsrouteregistry.md)
+
+- Express [registerExpressRoutes()](./otp-sdk.registerexpressroutes.md)
+
+- Fastify [registerFastifyRoutes()](./otp-sdk.registerfastifyroutes.md)
+
 ## Classes
 
 <table><thead><tr><th>
@@ -67,12 +85,80 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
+[CaptchaProvider](./otp-sdk.captchaprovider.md)
+
+
+</td><td>
+
+**_(BETA)_** Провайдер каптчи
+
+
+</td></tr>
+<tr><td>
+
+[EOtpChannelCodeType](./otp-sdk.eotpchannelcodetype.md)
+
+
+</td><td>
+
+**_(BETA)_** Тип канала (кодовый или безкодовый) Относится только к первому запросу в канал т.к. тип может измениться во время запроса
+
+
+</td></tr>
+<tr><td>
+
+[EOtpChannelTypes](./otp-sdk.eotpchanneltypes.md)
+
+
+</td><td>
+
+**_(BETA)_** Типы каналов
+
+Не путать с типами контрактов 'EOtpHandlerContracts' ! При добавлении новых типов не забыть добавить их в `OtpChannelTypeToOtpHandlerContractsMap` и в 'OtpChannelCodeTypeMap' !
+
+
+</td></tr>
+<tr><td>
+
+[EOtpHandlerChannelStatus](./otp-sdk.eotphandlerchannelstatus.md)
+
+
+</td><td>
+
+**_(BETA)_** Статус канала аутентификации
+
+
+</td></tr>
+<tr><td>
+
+[ErrorTypes](./otp-sdk.errortypes.md)
+
+
+</td><td>
+
+**_(BETA)_** Все типы ошибок
+
+
+</td></tr>
+<tr><td>
+
 [SigmaOtpSDKEnvironmentEnum](./otp-sdk.sigmaotpsdkenvironmentenum.md)
 
 
 </td><td>
 
 **_(BETA)_** Режимы работы SDK
+
+
+</td></tr>
+<tr><td>
+
+[SigmaOtpSDKGlobalEventNames](./otp-sdk.sigmaotpsdkglobaleventnames.md)
+
+
+</td><td>
+
+**_(BETA)_**
 
 
 </td></tr>
@@ -93,7 +179,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[registerExpressRoutes(app, settings)](./otp-sdk.registerexpressroutes.md)
+[registerExpressRoutes(app, settings, sigmaOtpSdk)](./otp-sdk.registerexpressroutes.md)
 
 
 </td><td>
@@ -104,7 +190,7 @@ Description
 </td></tr>
 <tr><td>
 
-[registerFastifyRoutes(app, settings)](./otp-sdk.registerfastifyroutes.md)
+[registerFastifyRoutes(app, settings, sigmaOtpSdk)](./otp-sdk.registerfastifyroutes.md)
 
 
 </td><td>
@@ -130,10 +216,23 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[ICaptchaConfig](./otp-sdk.icaptchaconfig.md)
+[BunJSRequestWithParams](./otp-sdk.bunjsrequestwithparams.md)
 
 
 </td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[ICloudflareCaptchaConfig](./otp-sdk.icloudflarecaptchaconfig.md)
+
+
+</td><td>
+
+**_(BETA)_** Настройки каптчи cloudlfare
 
 
 </td></tr>
@@ -145,6 +244,17 @@ Description
 </td><td>
 
 **_(BETA)_** Базовый интерфейс для исключений
+
+
+</td></tr>
+<tr><td>
+
+[IGoogleCaptchaConfig](./otp-sdk.igooglecaptchaconfig.md)
+
+
+</td><td>
+
+**_(BETA)_** Настройки каптчи google
 
 
 </td></tr>
@@ -216,12 +326,56 @@ Description
 </td></tr>
 <tr><td>
 
+[ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
 [ISigmaOtpSDKSettings](./otp-sdk.isigmaotpsdksettings.md)
 
 
 </td><td>
 
 **_(BETA)_** Настройки SDK
+
+
+</td></tr>
+<tr><td>
+
+[IYandexCaptchaConfig](./otp-sdk.iyandexcaptchaconfig.md)
+
+
+</td><td>
+
+**_(BETA)_** Настройки каптчи yandex
+
+
+</td></tr>
+<tr><td>
+
+[Logger](./otp-sdk.logger.md)
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[SigmaOtpSDKGlobalEvents](./otp-sdk.sigmaotpsdkglobalevents.md)
+
+
+</td><td>
+
+**_(BETA)_**
 
 
 </td></tr>
@@ -247,7 +401,7 @@ Description
 
 </td><td>
 
-Все исключения используемые в sdk
+**_(BETA)_** Все исключения используемые в sdk
 
 
 </td></tr>
@@ -268,21 +422,23 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[CaptchaProvider](./otp-sdk.captchaprovider.md)
+[ICaptchaConfig](./otp-sdk.icaptchaconfig.md)
 
 
 </td><td>
+
+**_(BETA)_** Настройки каптчи
 
 
 </td></tr>
 <tr><td>
 
-[ErrorTypes](./otp-sdk.errortypes.md)
+[IGetClientIp](./otp-sdk.igetclientip.md)
 
 
 </td><td>
 
-**_(BETA)_** Все типы ошибок
+**_(BETA)_**
 
 
 </td></tr>
@@ -304,6 +460,9 @@ Description
 
 </td><td>
 
+Тип для UUID Используется в основном для идентификаторов объектов в базе данных
+
 
 </td></tr>
 </tbody></table>
+

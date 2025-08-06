@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-export declare function registerFastifyRoutes(app: FastifyInstance, settings: ISigmaOtpSDKControllersSettings): void;
+export declare function registerFastifyRoutes(app: FastifyInstance, settings: ISigmaOtpSDKControllersSettings, sigmaOtpSdk: SigmaOtpSDK): void;
 ```
 
 ## Parameters
@@ -54,7 +54,21 @@ settings
 
 </td><td>
 
-ISigmaOtpSDKControllersSettings
+[ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sigmaOtpSdk
+
+
+</td><td>
+
+[SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)
 
 
 </td><td>
@@ -62,6 +76,7 @@ ISigmaOtpSDKControllersSettings
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 void

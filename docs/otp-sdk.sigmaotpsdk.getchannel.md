@@ -50,6 +50,7 @@ ID процесса который вернул send
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[IOtpChannelData](./otp-sdk.iotpchanneldata.md)<!-- -->&gt;
