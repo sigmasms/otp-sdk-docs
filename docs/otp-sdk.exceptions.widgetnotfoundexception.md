@@ -12,20 +12,29 @@
 **Signature:**
 
 ```typescript
-class WidgetNotFoundException extends OtpException 
+class WidgetNotFoundException implements IError 
 ```
-**Extends:** [OtpException](./otp-sdk.exceptions.otpexception.md)
+**Implements:** [IError](./otp-sdk.ierror.md)
 
-## Constructors
+## Remarks
+
+The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `WidgetNotFoundException` class.
+
+## Properties
 
 <table><thead><tr><th>
 
-Constructor
+Property
 
 
 </th><th>
 
 Modifiers
+
+
+</th><th>
+
+Type
 
 
 </th><th>
@@ -36,7 +45,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[(constructor)(input)](./otp-sdk.exceptions.widgetnotfoundexception._constructor_.md)
+[message](./otp-sdk.exceptions.widgetnotfoundexception.message.md)
 
 
 </td><td>
@@ -44,8 +53,52 @@ Description
 
 </td><td>
 
-**_(BETA)_** Constructs a new instance of the `WidgetNotFoundException` class
+string
+
+
+</td><td>
+
+**_(BETA)_** Сообщение об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[payload?](./otp-sdk.exceptions.widgetnotfoundexception.payload.md)
+
+
+</td><td>
+
+
+</td><td>
+
+unknown
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[type](./otp-sdk.exceptions.widgetnotfoundexception.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ErrorTypes.WidgetNotFoundException](./otp-sdk.errortypes.md)
+
+
+</td><td>
+
+**_(BETA)_** 
 
 
 </td></tr>
 </tbody></table>
+

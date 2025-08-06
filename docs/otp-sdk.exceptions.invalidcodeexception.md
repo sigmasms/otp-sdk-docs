@@ -12,24 +12,29 @@
 **Signature:**
 
 ```typescript
-class InvalidCodeException extends OtpException 
+class InvalidCodeException implements IError 
 ```
-**Extends:** [OtpException](./otp-sdk.exceptions.otpexception.md)
+**Implements:** [IError](./otp-sdk.ierror.md)
 
 ## Remarks
 
-Это исключение возникает при вызове метода [SigmaOtpSDK.verifyCode()](./otp-sdk.sigmaotpsdk.verifycode.md) с неверным кодом.
+The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `InvalidCodeException` class.
 
-## Constructors
+## Properties
 
 <table><thead><tr><th>
 
-Constructor
+Property
 
 
 </th><th>
 
 Modifiers
+
+
+</th><th>
+
+Type
 
 
 </th><th>
@@ -40,7 +45,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[(constructor)(input)](./otp-sdk.exceptions.invalidcodeexception._constructor_.md)
+[message](./otp-sdk.exceptions.invalidcodeexception.message.md)
 
 
 </td><td>
@@ -48,8 +53,52 @@ Description
 
 </td><td>
 
-**_(BETA)_** Constructs a new instance of the `InvalidCodeException` class
+string
+
+
+</td><td>
+
+**_(BETA)_** Сообщение об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[payload?](./otp-sdk.exceptions.invalidcodeexception.payload.md)
+
+
+</td><td>
+
+
+</td><td>
+
+unknown
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[type](./otp-sdk.exceptions.invalidcodeexception.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ErrorTypes.InvalidCodeException](./otp-sdk.errortypes.md)
+
+
+</td><td>
+
+**_(BETA)_** 
 
 
 </td></tr>
 </tbody></table>
+

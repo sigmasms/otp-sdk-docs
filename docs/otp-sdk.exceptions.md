@@ -4,12 +4,23 @@
 
 ## Exceptions namespace
 
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 
+
 Все исключения используемые в sdk
 
 **Signature:**
 
 ```typescript
 export declare namespace Exceptions 
+```
+
+## Example
+
+Для проверки типа исключения используйте:
+
+```ts
+error.type === ErrorTypes.WidgetNotFoundException
 ```
 
 ## Classes
@@ -137,17 +148,6 @@ Description
 </td></tr>
 <tr><td>
 
-[OtpException](./otp-sdk.exceptions.otpexception.md)
-
-
-</td><td>
-
-**_(BETA)_** Базовый класс для исключений
-
-
-</td></tr>
-<tr><td>
-
 [PhoneNumberMismatchException](./otp-sdk.exceptions.phonenumbermismatchexception.md)
 
 
@@ -257,3 +257,4 @@ Description
 
 </td></tr>
 </tbody></table>
+

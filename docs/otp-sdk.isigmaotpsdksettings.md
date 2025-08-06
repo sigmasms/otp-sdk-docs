@@ -78,6 +78,25 @@ string
 </td></tr>
 <tr><td>
 
+[captchaConfig?](./otp-sdk.isigmaotpsdksettings.captchaconfig.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ICaptchaConfig](./otp-sdk.icaptchaconfig.md)
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Конфигурация для каптчи
+
+
+</td></tr>
+<tr><td>
+
 [environment](./otp-sdk.isigmaotpsdksettings.environment.md)
 
 
@@ -114,4 +133,24 @@ string
 
 
 </td></tr>
+<tr><td>
+
+[logger?](./otp-sdk.isigmaotpsdksettings.logger.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Logger](./otp-sdk.logger.md)
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Простой логгер
+
+
+</td></tr>
 </tbody></table>
+

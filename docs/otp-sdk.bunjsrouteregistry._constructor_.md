@@ -12,7 +12,7 @@ Constructs a new instance of the `BunJSRouteRegistry` class
 **Signature:**
 
 ```typescript
-constructor(settings: ISigmaOtpSDKControllersSettings);
+constructor(settings: ISigmaOtpSDKControllersSettings, sigmaOtpSdk: SigmaOtpSDK);
 ```
 
 ## Parameters
@@ -40,7 +40,21 @@ settings
 
 </td><td>
 
-ISigmaOtpSDKControllersSettings
+[ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sigmaOtpSdk
+
+
+</td><td>
+
+[SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)
 
 
 </td><td>
@@ -48,3 +62,4 @@ ISigmaOtpSDKControllersSettings
 
 </td></tr>
 </tbody></table>
+

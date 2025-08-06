@@ -12,9 +12,9 @@ Forbidden exception
 **Signature:**
 
 ```typescript
-class CommonForbiddenException extends OtpException 
+class CommonForbiddenException implements IError 
 ```
-**Extends:** [OtpException](./otp-sdk.exceptions.otpexception.md)
+**Implements:** [IError](./otp-sdk.ierror.md)
 
 ## Constructors
 
@@ -49,3 +49,86 @@ Description
 
 </td></tr>
 </tbody></table>
+
+## Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[message](./otp-sdk.exceptions.commonforbiddenexception.message.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+**_(BETA)_** Сообщение об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[payload?](./otp-sdk.exceptions.commonforbiddenexception.payload.md)
+
+
+</td><td>
+
+
+</td><td>
+
+unknown
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[type](./otp-sdk.exceptions.commonforbiddenexception.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ErrorTypes.CommonForbiddenException](./otp-sdk.errortypes.md)
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+</tbody></table>
+
