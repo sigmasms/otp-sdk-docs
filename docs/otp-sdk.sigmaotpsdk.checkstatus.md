@@ -66,6 +66,7 @@ string
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;

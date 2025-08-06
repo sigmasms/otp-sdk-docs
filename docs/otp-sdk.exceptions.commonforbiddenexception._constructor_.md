@@ -12,7 +12,7 @@ Constructs a new instance of the `CommonForbiddenException` class
 **Signature:**
 
 ```typescript
-constructor(input: Pick<IError, "payload">);
+constructor(input: Partial<Pick<IError, "payload" | "message">>);
 ```
 
 ## Parameters
@@ -40,7 +40,7 @@ input
 
 </td><td>
 
-Pick&lt;[IError](./otp-sdk.ierror.md)<!-- -->, "payload"&gt;
+Partial&lt;Pick&lt;[IError](./otp-sdk.ierror.md)<!-- -->, "payload" \| "message"&gt;&gt;
 
 
 </td><td>
@@ -48,3 +48,4 @@ Pick&lt;[IError](./otp-sdk.ierror.md)<!-- -->, "payload"&gt;
 
 </td></tr>
 </tbody></table>
+

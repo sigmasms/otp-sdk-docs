@@ -24,6 +24,9 @@ Description
 
 </td><td>
 
+SDK для сервиса аутентификации SIGMA
+
 
 </td></tr>
 </tbody></table>
+

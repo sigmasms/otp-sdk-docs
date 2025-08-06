@@ -12,24 +12,31 @@
 **Signature:**
 
 ```typescript
-class IsCodelessChannelException extends OtpException 
+class IsCodelessChannelException implements IError 
 ```
-**Extends:** [OtpException](./otp-sdk.exceptions.otpexception.md)
+**Implements:** [IError](./otp-sdk.ierror.md)
 
 ## Remarks
 
 Это исключение возникает при попытке проверки кода в безкодовом канале
 
-## Constructors
+The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `IsCodelessChannelException` class.
+
+## Properties
 
 <table><thead><tr><th>
 
-Constructor
+Property
 
 
 </th><th>
 
 Modifiers
+
+
+</th><th>
+
+Type
 
 
 </th><th>
@@ -40,7 +47,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[(constructor)(input)](./otp-sdk.exceptions.iscodelesschannelexception._constructor_.md)
+[message](./otp-sdk.exceptions.iscodelesschannelexception.message.md)
 
 
 </td><td>
@@ -48,8 +55,52 @@ Description
 
 </td><td>
 
-**_(BETA)_** Constructs a new instance of the `IsCodelessChannelException` class
+string
+
+
+</td><td>
+
+**_(BETA)_** Сообщение об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[payload?](./otp-sdk.exceptions.iscodelesschannelexception.payload.md)
+
+
+</td><td>
+
+
+</td><td>
+
+unknown
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
+
+
+</td></tr>
+<tr><td>
+
+[type](./otp-sdk.exceptions.iscodelesschannelexception.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ErrorTypes.IsCodelessChannelException](./otp-sdk.errortypes.md)
+
+
+</td><td>
+
+**_(BETA)_** 
 
 
 </td></tr>
 </tbody></table>
+

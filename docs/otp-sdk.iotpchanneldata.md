@@ -48,7 +48,7 @@ Description
 
 </td><td>
 
-EOtpChannelCodeType
+[EOtpChannelCodeType](./otp-sdk.eotpchannelcodetype.md)
 
 
 </td><td>
@@ -143,7 +143,7 @@ number
 
 </td><td>
 
-EOtpHandlerChannelStatus
+[EOtpHandlerChannelStatus](./otp-sdk.eotphandlerchannelstatus.md)
 
 
 </td><td>
@@ -162,7 +162,7 @@ EOtpHandlerChannelStatus
 
 </td><td>
 
-EOtpChannelTypes
+[EOtpChannelTypes](./otp-sdk.eotpchanneltypes.md)
 
 
 </td><td>
@@ -172,3 +172,4 @@ EOtpChannelTypes
 
 </td></tr>
 </tbody></table>
+

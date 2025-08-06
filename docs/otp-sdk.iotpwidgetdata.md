@@ -53,9 +53,26 @@ boolean
 
 </td><td>
 
-**_(ALPHA)_** Статус подключения капчи
+**_(BETA)_** Флаг, указывающий на необходимость каптчи
 
-В данный момент не активный
+
+</td></tr>
+<tr><td>
+
+[captchaProvider?](./otp-sdk.iotpwidgetdata.captchaprovider.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[CaptchaProvider](./otp-sdk.captchaprovider.md)
+
+
+</td><td>
+
+**_(BETA)_** _(Optional)_ Провайдер каптчи, если используется
 
 
 </td></tr>
@@ -117,3 +134,4 @@ string
 
 </td></tr>
 </tbody></table>
+

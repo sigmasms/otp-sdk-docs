@@ -2,10 +2,84 @@
 
 [Home](./index.md) &gt; [@sigmamessaging/otp-sdk](./otp-sdk.md) &gt; [CaptchaProvider](./otp-sdk.captchaprovider.md)
 
-## CaptchaProvider type
+## CaptchaProvider enum
+
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 
+
+Провайдер каптчи
 
 **Signature:**
 
 ```typescript
-export type CaptchaProvider = "recaptcha" | "hcaptcha";
+export declare enum CaptchaProvider 
 ```
+
+## Enumeration Members
+
+<table><thead><tr><th>
+
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+cloudflare
+
+
+</td><td>
+
+`"cloudflare"`
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+google
+
+
+</td><td>
+
+`"google"`
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+yandex
+
+
+</td><td>
+
+`"yandex"`
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+</tbody></table>
+

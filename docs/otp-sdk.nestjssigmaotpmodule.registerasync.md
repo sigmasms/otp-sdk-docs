@@ -11,7 +11,13 @@
 
 ```typescript
 static registerAsync(options: {
-		useFactory: (...args: any[]) => Promise<ISigmaOtpSDKControllersSettings> | ISigmaOtpSDKControllersSettings;
+		useFactory: (...args: any[]) => Promise<{
+			settings: ISigmaOtpSDKControllersSettings;
+			sigmaOtpSdk: SigmaOtpSDK;
+		}> | {
+			settings: ISigmaOtpSDKControllersSettings;
+			sigmaOtpSdk: SigmaOtpSDK;
+		};
 		inject?: any[];
 	}): Promise<DynamicModule>;
 ```
@@ -41,7 +47,7 @@ options
 
 </td><td>
 
-{ useFactory: (...args: any\[\]) =&gt; Promise&lt;ISigmaOtpSDKControllersSettings&gt; \| ISigmaOtpSDKControllersSettings; inject?: any\[\]; }
+{ useFactory: (...args: any\[\]) =&gt; Promise&lt;{ settings: [ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)<!-- -->; sigmaOtpSdk: [SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)<!-- -->; }&gt; \| { settings: [ISigmaOtpSDKControllersSettings](./otp-sdk.isigmaotpsdkcontrollerssettings.md)<!-- -->; sigmaOtpSdk: [SigmaOtpSDK](./otp-sdk.sigmaotpsdk.md)<!-- -->; }; inject?: any\[\]; }
 
 
 </td><td>
@@ -49,6 +55,7 @@ options
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;DynamicModule&gt;

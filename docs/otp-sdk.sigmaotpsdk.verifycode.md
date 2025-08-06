@@ -66,6 +66,7 @@ string
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
@@ -98,7 +99,7 @@ Promise&lt;[IOtpGetStatusData](./otp-sdk.iotpgetstatusdata.md)<!-- -->&gt;
 
 Вызывается для проверки кода в кодовом канале, при попытке вызвать метод при текущем безкодовом канале будет ошибка [Exceptions.IsCodelessChannelException](./otp-sdk.exceptions.iscodelesschannelexception.md)<!-- -->.
 
-Должен вызываться только при статусе текущего канала  иначе вернёт ошибку [Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)<!-- -->.
+Должен вызываться только при статусе текущего канала [EOtpHandlerChannelStatus.sent](./otp-sdk.eotphandlerchannelstatus.md) иначе вернёт ошибку [Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)<!-- -->.
 
 При неверном коде возвращает ошибку [Exceptions.InvalidCodeException](./otp-sdk.exceptions.invalidcodeexception.md)<!-- -->.
 

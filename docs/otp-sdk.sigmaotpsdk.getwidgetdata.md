@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-getWidgetData(widgetId: string): Promise<IOtpWidgetData>;
+getWidgetData(widgetId: string, userIp: string): Promise<IOtpWidgetData>;
 ```
 
 ## Parameters
@@ -49,7 +49,24 @@ widget ID
 
 
 </td></tr>
+<tr><td>
+
+userIp
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+ip пользователя
+
+
+</td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[IOtpWidgetData](./otp-sdk.iotpwidgetdata.md)<!-- -->&gt;
