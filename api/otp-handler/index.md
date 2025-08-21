@@ -12,6 +12,7 @@ Base URLs:
 - HTTP Authentication, scheme: bearer 
 
 <h3>Endpoins</h3>
+
 |Name|Description|
 |---|---|
 |[getWidget](./getWidget)|*Получить данные формы*|
