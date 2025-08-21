@@ -108,3 +108,20 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/resen
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|RestartCooldownActiveException, SessionAlreadyConfirmedException|Inline|
 
+
+<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
+<!-- backwards compatibility -->
+<a id="schemaotphandlergetstatusresponsedto"></a>
+
+```json
+{
+  "success": true
+}
+
+```
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|success|boolean|true|none|none|

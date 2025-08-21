@@ -104,3 +104,32 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channe
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
+
+<h2 id="tocS_OtpHandlerGetChannelResponseDto">OtpHandlerGetChannelResponseDto</h2>
+<!-- backwards compatibility -->
+<a id="schemaotphandlergetchannelresponsedto"></a>
+
+```json
+{
+  "type": "sms",
+  "status": "wait",
+  "label": "string",
+  "codeType": "code",
+  "payload": {},
+  "settings": {},
+  "remainingCodeAttempts": 0
+}
+
+```
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|type|string|true|none|none|
+|status|string|true|none|none|
+|label|string|true|none|none|
+|codeType|string|true|none|none|
+|payload|object|false|none|none|
+|settings|object|true|none|none|
+|remainingCodeAttempts|number|true|none|none|

@@ -92,3 +92,42 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/ \
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|WidgetIsBlockedException, ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WidgetNotFoundException|Inline|
+
+<h2 id="tocS_OtpHandlerSendRequestDto">OtpHandlerSendRequestDto</h2>
+<!-- backwards compatibility -->
+<a id="schemaotphandlersendrequestdto"></a>
+<a id="schema_OtpHandlerSendRequestDto"></a>
+<a id="tocSotphandlersendrequestdto"></a>
+<a id="tocsotphandlersendrequestdto"></a>
+
+```json
+{
+  "widgetId": "123634df-ddfe-4dda-b31d-f3b4e75fc5dc",
+  "recipient": "string"
+}
+
+```
+
+### Properties
+
+| Name      | Type         | Required | Restrictions | Description |
+| --------- | ------------ | -------- | ------------ | ----------- |
+| widgetId  | string(uuid) | true     | none         | none        |
+| recipient | string       | true     | none         | none        |
+
+<h2 id="tocS_OtpHandlerSendResponseDto">OtpHandlerSendResponseDto</h2>
+<!-- backwards compatibility -->
+<a id="schemaotphandlersendresponsedto"></a>
+
+```json
+{
+  "requestId": "d385ab22-0f51-4b97-9ecd-b8ff3fd4fcb6"
+}
+
+```
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|requestId|string(uuid)|true|none|none|
