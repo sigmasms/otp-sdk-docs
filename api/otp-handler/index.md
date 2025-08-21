@@ -15,13 +15,13 @@ Base URLs:
 
 |Name|Description|
 |---|---|
-|[getWidget](./getWidget)|*Получить данные формы*|
-|[send](./send)|*Запросить аутентификацию*|
-|[getChannel](./get-channel)|*Запросить текущий канал*|
+|[getWidget](./get-widget.md)|*Получить данные формы*|
+|[send](./send.md)|*Запросить аутентификацию*|
+|[getChannel](./get-channel.md)|*Запросить текущий канал*|
 |[getChannelLongPolling](./get-channel-long-polling.md)|*Запросить текущий канал (long-polling)*|
 |[getStatus](./get-status.md)|*Запросить статус авторизации*|
 |[getStatusLongPolling](./get-status-long-polling.md)|*Запросить статус авторизации (long-polling)*|
 |[checkCode](./check-code.md)|*Проверить введенный пользователем код*|
 |[checkStatusAndComplete](./check-status-and-complete.md)|*Проверить статус и завершить процесс авторизации*|
-|[complete](./complete)|*Завершить процесс аутентификации*|
-|[resend](./resend)|*Переотправить код для запроса*|
+|[complete](./complete.md)|*Завершить процесс аутентификации*|
+|[resend](./resend.md)|*Переотправить код для запроса*|
