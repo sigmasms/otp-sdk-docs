@@ -1,29 +1,28 @@
-# getChannel
+# getStatus
 
-<a id="opIdOtpHandlerController_getChannel"></a>
+<a id="opIdOtpHandlerController_getStatus"></a>
 
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channel \
+curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/status?recipient=string \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
 ```
 
 
-`GET /{requestId}/channel`
+`GET /{requestId}/status`
 
-*Запросить текущий канал*
+*Запросить статус авторизации*
 
-Возвращает данные текущего канала
-
-<h3 id="otphandlercontroller_getchannel-parameters">Parameters</h3>
+<h3 id="otphandlercontroller_getstatus-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |requestId|path|string|true|none|
+|recipient|query|string|true|none|
 
 > Прмеры ответа
 
@@ -31,17 +30,11 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channe
 
 ```json
 {
-  "type": "sms",
-  "status": "wait",
-  "label": "string",
-  "codeType": "code",
-  "payload": {},
-  "settings": {},
-  "remainingCodeAttempts": 0
+  "success": true
 }
 ```
 
-> ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException
+> ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException, ChannelChangedException
 
 ```json
 {
@@ -75,6 +68,14 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channe
 }
 ```
 
+```json
+{
+  "type": "ChannelChangedException",
+  "message": "Требуется сменить канал авторизации. Перезапросите текущий канал, чтобы отрисовать нужный для него компонент на frontend",
+  "httpStatus": 400
+}
+```
+
 > ForbiddenException
 
 ```json
@@ -95,29 +96,34 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channe
 }
 ```
 
-<h3 id="otphandlercontroller_getchannel-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetChannelResponseDto](#schemaotphandlergetchannelresponsedto)|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException|Inline|
-|401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
-|403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
-
-<h2 id="tocS_OtpHandlerGetChannelResponseDto">OtpHandlerGetChannelResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetchannelresponsedto"></a>
+> PhoneNumberMismatchException
 
 ```json
 {
-  "type": "sms",
-  "status": "wait",
-  "label": "string",
-  "codeType": "code",
-  "payload": {},
-  "settings": {},
-  "remainingCodeAttempts": 0
+  "type": "PhoneNumberMismatchException",
+  "message": "Номер телефона не совпадает с привязанным к текущей сессии.",
+  "httpStatus": 409
+}
+```
+
+<h3 id="otphandlercontroller_getstatus-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException, ChannelChangedException|Inline|
+|401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
+|403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
+|409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|PhoneNumberMismatchException|Inline|
+
+<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
+<!-- backwards compatibility -->
+<a id="schemaotphandlergetstatusresponsedto"></a>
+
+```json
+{
+  "success": true
 }
 
 ```
@@ -126,10 +132,4 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channe
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|type|string|true|none|Тип канала|
-|status|string|true|none|Статус|
-|label|string|true|none|Короткое название|
-|codeType|string|true|none|Тип канала (кодовый или безкодовый)|
-|payload|object|false|none|Полезная нагрузка|
-|settings|object|true|none|Настройки|
-|remainingCodeAttempts|number|true|none|Количество повторных попыток ввода кода|
+|success|boolean|true|none|none|

@@ -1,27 +1,28 @@
-# getChannelLongPolling
+# getStatusLongPolling
 
-<a id="opIdOtpHandlerController_getChannelLongPolling"></a>
+<a id="opIdOtpHandlerController_getStatusLongPolling"></a>
 
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{requestId}/channel \
+curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{requestId}/status?recipient=string \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
 ```
 
 
-`GET /longPolling/{requestId}/channel`
+`GET /longPolling/{requestId}/status`
 
-*Запросить текущий канал (long-polling)*
+*Запросить статус авторизации (long-polling)*
 
-<h3 id="otphandlercontroller_getchannellongpolling-parameters">Parameters</h3>
+<h3 id="otphandlercontroller_getstatuslongpolling-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |requestId|path|string|true|none|
+|recipient|query|string|true|none|
 
 > Прмеры ответа
 
@@ -29,17 +30,11 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 
 ```json
 {
-  "type": "sms",
-  "status": "wait",
-  "label": "string",
-  "codeType": "code",
-  "payload": {},
-  "settings": {},
-  "remainingCodeAttempts": 0
+  "success": true
 }
 ```
 
-> ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException
+> ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException
 
 ```json
 {
@@ -61,14 +56,6 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 {
   "type": "NoAvailableChannelsException",
   "message": "Нет подходящих каналов для отправки сообщения, запустите попытку авторизации заново",
-  "httpStatus": 400
-}
-```
-
-```json
-{
-  "type": "SessionClosedException",
-  "message": "Сессия закрыта",
   "httpStatus": 400
 }
 ```
@@ -103,33 +90,35 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 }
 ```
 
-<h3 id="otphandlercontroller_getchannellongpolling-responses">Responses</h3>
+> PhoneNumberMismatchException
+
+```json
+{
+  "type": "PhoneNumberMismatchException",
+  "message": "Номер телефона не совпадает с привязанным к текущей сессии.",
+  "httpStatus": 409
+}
+```
+
+<h3 id="otphandlercontroller_getstatuslongpolling-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetChannelResponseDto](#schemaotphandlergetchannelresponsedto)|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 |408|[Request Timeout](https://tools.ietf.org/html/rfc7231#section-6.5.7)|LongPollingTimeoutException|Inline|
+|409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|PhoneNumberMismatchException|Inline|
 
-<h2 id="tocS_OtpHandlerGetChannelResponseDto">OtpHandlerGetChannelResponseDto</h2>
+<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
 <!-- backwards compatibility -->
-<a id="schemaotphandlergetchannelresponsedto"></a>
-<a id="schema_OtpHandlerGetChannelResponseDto"></a>
-<a id="tocSotphandlergetchannelresponsedto"></a>
-<a id="tocsotphandlergetchannelresponsedto"></a>
+<a id="schemaotphandlergetstatusresponsedto"></a>
 
 ```json
 {
-  "type": "sms",
-  "status": "wait",
-  "label": "string",
-  "codeType": "code",
-  "payload": {},
-  "settings": {},
-  "remainingCodeAttempts": 0
+  "success": true
 }
 
 ```
@@ -138,10 +127,4 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|type|string|true|none|Тип канала|
-|status|string|true|none|Статус|
-|label|string|true|none|Короткое название|
-|codeType|string|true|none|Тип канала (кодовый или безкодовый)|
-|payload|object|false|none|Полезная нагрузка|
-|settings|object|true|none|Настройки|
-|remainingCodeAttempts|number|true|none|Количество повторных попыток ввода кода|
+|success|boolean|true|none|none|
