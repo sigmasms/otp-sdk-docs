@@ -1,11 +1,7 @@
 
-<h1 id="otp-handler-service">otp-handler Service v1.0.0</h1>
+<h1>otp-sdk-nodejs</h1>
 
 API для otp-handler
-
-Base URLs:
-
-* <a href="http://online.sigmasms.ru/api/n/otp-handler/">http://online.sigmasms.ru/api/n/otp-handler/</a>
 
 # Authentication
 

@@ -1,12 +1,10 @@
 # getWidget
 
-<a id="opIdOtpHandlerController_getWidget"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/widget/{widgetId} \
+curl -X GET http://sdk-url/widget/{widgetId} \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
@@ -17,7 +15,7 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/widget/{widgetId} 
 
 *Получить данные формы*
 
-<h3 id="otphandlercontroller_getwidget-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -55,18 +53,16 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/widget/{widgetId} 
 }
 ```
 
-<h3 id="otphandlercontroller_getwidget-responses">Responses</h3>
+<h3>Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetWidgetResponseDto](#schemaotphandlergetwidgetresponsedto)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|GetWidgetResponseDto|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|WidgetNotFoundException|Inline|
 
-<h2 id="tocS_OtpHandlerGetWidgetResponseDto">OtpHandlerGetWidgetResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetwidgetresponsedto"></a>
+<h2>GetWidgetResponseDto</h2>
 
 ```json
 {

@@ -1,12 +1,10 @@
 # getChannelLongPolling
 
-<a id="opIdOtpHandlerController_getChannelLongPolling"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{requestId}/channel \
+curl -X GET http://sdk-url/longPolling/{requestId}/channel \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
@@ -17,7 +15,7 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 
 *Запросить текущий канал (long-polling)*
 
-<h3 id="otphandlercontroller_getchannellongpolling-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -103,23 +101,18 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 }
 ```
 
-<h3 id="otphandlercontroller_getchannellongpolling-responses">Responses</h3>
+<h3>Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetChannelResponseDto](#schemaotphandlergetchannelresponsedto)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|GetChannelResponseDto|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 |408|[Request Timeout](https://tools.ietf.org/html/rfc7231#section-6.5.7)|LongPollingTimeoutException|Inline|
 
-<h2 id="tocS_OtpHandlerGetChannelResponseDto">OtpHandlerGetChannelResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetchannelresponsedto"></a>
-<a id="schema_OtpHandlerGetChannelResponseDto"></a>
-<a id="tocSotphandlergetchannelresponsedto"></a>
-<a id="tocsotphandlergetchannelresponsedto"></a>
+<h2>GetChannelResponseDto</h2>
 
 ```json
 {

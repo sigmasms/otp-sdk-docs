@@ -1,12 +1,10 @@
 # getStatusLongPolling
 
-<a id="opIdOtpHandlerController_getStatusLongPolling"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{requestId}/status?recipient=string \
+curl -X GET http://sdk-url/longPolling/{requestId}/status?recipient=string \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
@@ -17,7 +15,7 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 
 *Запросить статус авторизации (long-polling)*
 
-<h3 id="otphandlercontroller_getstatuslongpolling-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -100,11 +98,11 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 }
 ```
 
-<h3 id="otphandlercontroller_getstatuslongpolling-responses">Responses</h3>
+<h3>Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|GetStatusResponseDto|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
@@ -112,9 +110,7 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/longPolling/{reque
 |408|[Request Timeout](https://tools.ietf.org/html/rfc7231#section-6.5.7)|LongPollingTimeoutException|Inline|
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|PhoneNumberMismatchException|Inline|
 
-<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetstatusresponsedto"></a>
+<h2>GetStatusResponseDto</h2>
 
 ```json
 {

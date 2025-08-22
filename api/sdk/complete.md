@@ -1,12 +1,10 @@
 # complete
 
-<a id="opIdOtpHandlerController_complete"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/complete \
+curl -X POST http://sdk-url/{requestId}/complete \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
@@ -17,7 +15,7 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/compl
 
 *Завершить процесс аутентификации*
 
-<h3 id="otphandlercontroller_complete-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -53,18 +51,16 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/compl
 }
 ```
 
-<h3 id="otphandlercontroller_complete-responses">Responses</h3>
+<h3>Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|GetStatusResponseDto|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 
-<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetstatusresponsedto"></a>
+<h2>GetStatusResponseDto</h2>
 
 ```json
 {

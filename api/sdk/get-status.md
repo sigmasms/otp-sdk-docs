@@ -1,12 +1,10 @@
 # getStatus
 
-<a id="opIdOtpHandlerController_getStatus"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/status?recipient=string \
+curl -X GET http://sdk-url/{requestId}/status?recipient=string \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
@@ -17,7 +15,7 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/status
 
 *Запросить статус авторизации*
 
-<h3 id="otphandlercontroller_getstatus-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -110,16 +108,14 @@ curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|GetStatusResponseDto|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException, ChannelChangedException|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|PhoneNumberMismatchException|Inline|
 
-<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetstatusresponsedto"></a>
+<h2>GetStatusResponseDto</h2>
 
 ```json
 {

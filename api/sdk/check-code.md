@@ -1,12 +1,10 @@
 # checkCode
 
-<a id="opIdOtpHandlerController_checkCode"></a>
-
 > Пример curl запроса
 
 ```shell
 # You can also use wget
-curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/checkCode \
+curl -X POST http://sdk-url/{requestId}/checkCode \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
@@ -25,12 +23,12 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/check
 }
 ```
 
-<h3 id="otphandlercontroller_checkcode-parameters">Parameters</h3>
+<h3>Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |requestId|path|string|true|none|
-|body|body|[OtpHandlerCheckCodeRequestDto](#schemaotphandlercheckcoderequestdto)|true|none|
+|body|body|CheckCodeRequestDto|true|none|
 
 > Прмеры ответа
 
@@ -112,20 +110,18 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/check
 }
 ```
 
-<h3 id="otphandlercontroller_checkcode-responses">Responses</h3>
+<h3>Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OtpHandlerGetStatusResponseDto](#schemaotphandlergetstatusresponsedto)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|GetStatusResponseDto|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|ResendChannelException, AttemptsExpiredException, NoAvailableChannelsException, SessionClosedException, InvalidCodeException|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|IsCodelessChannelException, ForbiddenException|Inline|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|SessionNotFoundException|Inline|
 
 
-<h2 id="tocS_OtpHandlerCheckCodeRequestDto">OtpHandlerCheckCodeRequestDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlercheckcoderequestdto"></a>
+<h2>CheckCodeRequestDto</h2>
 
 ```json
 {
@@ -140,12 +136,7 @@ curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/check
 |---|---|---|---|---|
 |code|string|true|none|код введённый пользователем|
 
-<h2 id="tocS_OtpHandlerGetStatusResponseDto">OtpHandlerGetStatusResponseDto</h2>
-<!-- backwards compatibility -->
-<a id="schemaotphandlergetstatusresponsedto"></a>
-<a id="schema_OtpHandlerGetStatusResponseDto"></a>
-<a id="tocSotphandlergetstatusresponsedto"></a>
-<a id="tocsotphandlergetstatusresponsedto"></a>
+<h2>GetStatusResponseDto</h2>
 
 ```json
 {
