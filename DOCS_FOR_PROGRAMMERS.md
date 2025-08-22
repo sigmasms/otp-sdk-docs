@@ -42,13 +42,14 @@ sequenceDiagram
             Reseller -->> User: Код подтверждения
             User ->>+ Widget: Ввод кода подтверждения
             Widget ->>+ SDK: POST checkCode {code}
-            alt
             SDK ->>- Widget: RES {success: true}
-            else
-            SDK ->>- Widget: RES InvalidCodeException
-            Widget ->> User: Введённый код неверный. Повторите попытку.
-            end
             Note over Widget,SDK: См. пункт Окончание успешной аутентификации
+            alt Если введённый код оказался неверен
+            SDK ->>- Widget: RES {type: InvalidCodeException}
+            Widget ->> User: Введённый код неверный. Повторите попытку.
+            Note over Widget: Повторный попытка ввода кода
+            end
+            
         else codeType: codeless
             SDK ->> Widget: RES {status: sent, codeType: codeless}
             Widget ->>- User: Сообщение о том, что ждём подтвеждения пользователем
@@ -67,10 +68,10 @@ sequenceDiagram
         end
 
         Note over User,Reseller: Окончание успешной аутентификации
-        Widget ->>+ Backend: POST formSubmit {requestId, recipient}
+        Frontend ->>+ Backend: POST formSubmit {requestId, recipient}
         Backend ->>+ SDK: SDK.checkStatusAndComplete(requestId, recipient)
-        Backend ->>- Widget: Аутентицикация прошла успешно
-        Widget ->>- User: Аутентификация прошла успешно
+        Backend ->>- Frontend: RES ok
+        Frontend ->> User: Аутентификация прошла успешно
     else Ошибка
         Note over User,Reseller: Обработка ошибок
         alt
