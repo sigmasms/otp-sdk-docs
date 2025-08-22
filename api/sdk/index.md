@@ -1,7 +1,7 @@
 
 <h1>otp-sdk-nodejs</h1>
 
-API для otp-handler
+API для otp sdk nodejs
 
 # Authentication
 
