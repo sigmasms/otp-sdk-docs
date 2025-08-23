@@ -9,6 +9,8 @@
   <a href="https://www.npmjs.com/package/@sigmasms/otp-sdk"><img src="https://img.shields.io/npm/dw/@sigmasms/otp-sdk.svg" alt="downloads week" /></a>
 </p>
 
+[Документация для пользователей, администраторов и разработчиков](./DOCS_MAIN.md)
+
 ## Введение
 SDK предоставляет удобный интерфейс к сервису авторизации SIGMA по различным каналам. [Подробнее о сервисе](https://sigmasms.ru/servis-avtorizatsij/). \
 SIGMA OTP SDK для NodeJS помогает быстро интегрировать функционал в ваше приложение, предлагая гибкие настройки для уникальных требований проекта.

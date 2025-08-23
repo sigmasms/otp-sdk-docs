@@ -8,9 +8,10 @@
 
 ```mermaid
 flowchart TD
-    Widget --> Channel_SMS
-    Widget --> Channel_Voice
-    Widget --> Channel_Push
+    Widget_1 --> Channel_SMS
+    Widget_1 --> Channel_Voice
+    Widget_1 --> Channel_Push
+    Widget_2 --> Channel_Push
 
     Channel_SMS --> Template_1
     Channel_SMS --> Template_2
