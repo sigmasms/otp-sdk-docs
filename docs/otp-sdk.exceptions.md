@@ -4,9 +4,6 @@
 
 ## Exceptions namespace
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Все исключения используемые в sdk
 
 **Signature:**
@@ -43,7 +40,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Количество попыток ввода закончилось
+Количество попыток ввода закончилось
 
 
 </td></tr>
@@ -54,7 +51,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Капча не подтверждена
+Капча не подтверждена
 
 
 </td></tr>
@@ -65,7 +62,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Канал изменён, требуется получить канал заново.
+Канал изменён, требуется получить канал заново.
 
 
 </td></tr>
@@ -76,7 +73,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Forbidden exception
+Forbidden exception
 
 
 </td></tr>
@@ -87,7 +84,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Внутрення ошибка сервера
+Внутрення ошибка сервера
 
 
 </td></tr>
@@ -98,7 +95,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Переданный код неверный
+Переданный код неверный
 
 
 </td></tr>
@@ -109,7 +106,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Текущий канал безкодовый
+Текущий канал безкодовый
 
 
 </td></tr>
@@ -120,7 +117,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Истек timeout long-polling запроса
+Истек timeout long-polling запроса
 
 
 </td></tr>
@@ -131,7 +128,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Нет подходящих каналов для отправки
+Нет подходящих каналов для отправки
 
 
 </td></tr>
@@ -142,7 +139,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Ошибка подключения к SIGMA API
+Ошибка подключения к SIGMA API
 
 
 </td></tr>
@@ -153,7 +150,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Номер телефона не совпадает с привязанным к текущей сессии.
+Номер телефона не совпадает с привязанным к текущей сессии.
 
 
 </td></tr>
@@ -164,7 +161,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Ошибка RateLimit
+Ошибка RateLimit
 
 
 </td></tr>
@@ -175,7 +172,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Текущий канал дожлен быть перезапущен
+Текущий канал дожлен быть перезапущен
 
 
 </td></tr>
@@ -186,7 +183,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Время до перезапуска ещё не истекло
+Время до перезапуска ещё не истекло
 
 
 </td></tr>
@@ -197,7 +194,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Сессия уже подтверждена
+Сессия уже подтверждена
 
 
 </td></tr>
@@ -208,7 +205,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Сессия уже завершена
+Сессия уже завершена
 
 
 </td></tr>
@@ -219,7 +216,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Сессия не найдена
+Сессия не найдена
 
 
 </td></tr>
@@ -230,7 +227,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Ошибка валидации
+Ошибка валидации
 
 
 </td></tr>
@@ -241,7 +238,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Виджет заблокирован
+Виджет заблокирован
 
 
 </td></tr>
@@ -252,7 +249,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Виджет с таким ID не найден
+Виджет с таким ID не найден
 
 
 </td></tr>

@@ -4,9 +4,6 @@
 
 ## EOtpHandlerChannelStatus enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Статус канала аутентификации
 
 **Signature:**
@@ -45,7 +42,7 @@ closed
 
 </td><td>
 
-**_(BETA)_** Принудительное закрытие
+Принудительное закрытие
 
 
 </td></tr>
@@ -61,7 +58,7 @@ confirmed
 
 </td><td>
 
-**_(BETA)_** Успешное завершение
+Успешное завершение
 
 
 </td></tr>
@@ -77,7 +74,7 @@ error
 
 </td><td>
 
-**_(BETA)_** Канал закрыт из-за ошибки
+Канал закрыт из-за ошибки
 
 
 </td></tr>
@@ -93,7 +90,7 @@ sent
 
 </td><td>
 
-**_(BETA)_** Пользователю что-то отправленно
+Пользователю что-то отправленно
 
 
 </td></tr>
@@ -109,7 +106,7 @@ wait
 
 </td><td>
 
-**_(BETA)_** В процессе
+В процессе
 
 
 </td></tr>

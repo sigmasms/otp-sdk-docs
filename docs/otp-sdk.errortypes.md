@@ -4,9 +4,6 @@
 
 ## ErrorTypes enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Все типы ошибок
 
 **Signature:**
@@ -45,7 +42,7 @@ AttemptsExpiredException
 
 </td><td>
 
-**_(BETA)_** Количество попыток ввода закончилось
+Количество попыток ввода закончилось
 
 
 </td></tr>
@@ -61,7 +58,6 @@ BadRequestException
 
 </td><td>
 
-**_(BETA)_**
 
 
 </td></tr>
@@ -77,7 +73,7 @@ CaptchaNotConfirmedException
 
 </td><td>
 
-**_(BETA)_** Капча не подтверждена
+Капча не подтверждена
 
 
 </td></tr>
@@ -93,7 +89,7 @@ ChannelChangedException
 
 </td><td>
 
-**_(BETA)_** Канал изменён, требуется получить канал заново.
+Канал изменён, требуется получить канал заново.
 
 
 </td></tr>
@@ -109,7 +105,6 @@ CommonForbiddenException
 
 </td><td>
 
-**_(BETA)_**
 
 
 </td></tr>
@@ -125,7 +120,7 @@ InternalServerErrorException
 
 </td><td>
 
-**_(BETA)_** Внутрення ошибка сервера
+Внутрення ошибка сервера
 
 
 </td></tr>
@@ -141,7 +136,7 @@ InvalidCodeException
 
 </td><td>
 
-**_(BETA)_** Переданный код неверный
+Переданный код неверный
 
 
 </td></tr>
@@ -157,7 +152,7 @@ IsCodelessChannelException
 
 </td><td>
 
-**_(BETA)_** Текущий канал безкодовый
+Текущий канал безкодовый
 
 
 </td></tr>
@@ -173,7 +168,7 @@ LongPollingTimeoutException
 
 </td><td>
 
-**_(BETA)_** Истек timeout long-polling запроса
+Истек timeout long-polling запроса
 
 
 </td></tr>
@@ -189,7 +184,7 @@ NoAvailableChannelsException
 
 </td><td>
 
-**_(BETA)_** Нет подходящих каналов для отправки
+Нет подходящих каналов для отправки
 
 
 </td></tr>
@@ -205,7 +200,7 @@ NoConnectionException
 
 </td><td>
 
-**_(BETA)_** Ошибка подключения к SIGMA API
+Ошибка подключения к SIGMA API
 
 
 </td></tr>
@@ -221,7 +216,7 @@ PhoneNumberMismatchException
 
 </td><td>
 
-**_(BETA)_** Номер телефона не совпадает с привязанным к текущей сессии.
+Номер телефона не совпадает с привязанным к текущей сессии.
 
 
 </td></tr>
@@ -237,7 +232,7 @@ RateLimitException
 
 </td><td>
 
-**_(BETA)_** Ошибка RateLimit
+Ошибка RateLimit
 
 
 </td></tr>
@@ -253,7 +248,7 @@ RequestNotFoundException
 
 </td><td>
 
-**_(BETA)_** Зарпос не найден
+Зарпос не найден
 
 
 </td></tr>
@@ -269,7 +264,7 @@ ResendChannelException
 
 </td><td>
 
-**_(BETA)_** Текущий канал дожлен быть перезапущен
+Текущий канал дожлен быть перезапущен
 
 
 </td></tr>
@@ -285,7 +280,7 @@ RestartCooldownActiveException
 
 </td><td>
 
-**_(BETA)_** Время до перезапуска ещё не истекло
+Время до перезапуска ещё не истекло
 
 
 </td></tr>
@@ -301,7 +296,7 @@ SessionAlreadyConfirmedException
 
 </td><td>
 
-**_(BETA)_** Сессия уже завершена
+Сессия уже завершена
 
 
 </td></tr>
@@ -317,7 +312,7 @@ SessionClosedException
 
 </td><td>
 
-**_(BETA)_** Сессия уже закрыта
+Сессия уже закрыта
 
 
 </td></tr>
@@ -333,7 +328,7 @@ SessionNotFoundException
 
 </td><td>
 
-**_(BETA)_** Сессия не найдена
+Сессия не найдена
 
 
 </td></tr>
@@ -349,7 +344,7 @@ ValidateError
 
 </td><td>
 
-**_(BETA)_** Ошибка валидации
+Ошибка валидации
 
 
 </td></tr>
@@ -365,7 +360,7 @@ WidgetIsBlockedException
 
 </td><td>
 
-**_(BETA)_** Виджет заблокирован
+Виджет заблокирован
 
 
 </td></tr>
@@ -381,7 +376,7 @@ WidgetNotFoundException
 
 </td><td>
 
-**_(BETA)_** Виджет с таким ID не найден
+Виджет с таким ID не найден
 
 
 </td></tr>

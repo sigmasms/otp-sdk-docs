@@ -4,9 +4,6 @@
 
 ## EOtpChannelTypes enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Типы каналов
 
 Не путать с типами контрактов 'EOtpHandlerContracts' ! При добавлении новых типов не забыть добавить их в `OtpChannelTypeToOtpHandlerContractsMap` и в 'OtpChannelCodeTypeMap' !
@@ -47,8 +44,6 @@ flashcall
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -62,8 +57,6 @@ sim\_push
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>
@@ -79,8 +72,6 @@ sms
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -94,8 +85,6 @@ telegramcode
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>
@@ -111,8 +100,6 @@ viber
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -126,8 +113,6 @@ vk
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>
@@ -143,8 +128,6 @@ voice
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -158,8 +141,6 @@ whatsapp
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>

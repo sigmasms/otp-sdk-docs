@@ -4,9 +4,6 @@
 
 ## IYandexCaptchaConfig interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Настройки каптчи yandex
 
 **Signature:**
@@ -53,7 +50,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Секретный ключ/токен от yandex captcha
+Секретный ключ/токен от yandex captcha
 
 
 </td></tr>

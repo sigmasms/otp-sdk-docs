@@ -4,9 +4,6 @@
 
 ## SigmaOtpSDKGlobalEventNames enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 
 **Signature:**
 
@@ -44,8 +41,6 @@ CHANNEL\_CHANGED
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -59,8 +54,6 @@ ERROR
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>
@@ -76,8 +69,6 @@ RESEND\_CHANNEL
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -91,8 +82,6 @@ SUCCESS\_CONFIRMATION
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>

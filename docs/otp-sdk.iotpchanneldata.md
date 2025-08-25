@@ -4,9 +4,6 @@
 
 ## IOtpChannelData interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Данные канала
 
 **Signature:**
@@ -53,7 +50,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Способ процесса аутентификации
+Способ процесса аутентификации
 
 
 </td></tr>
@@ -72,7 +69,7 @@ string
 
 </td><td>
 
-**_(ALPHA)_** Строковое обозначение типа канала
+Строковое обозначение типа канала
 
 
 </td></tr>
@@ -91,7 +88,7 @@ string
 
 </td><td>
 
-**_(ALPHA)_** _(Optional)_ Полезная нагрузка отправленная каналом
+_(Optional)_ Полезная нагрузка отправленная каналом
 
 
 </td></tr>
@@ -110,7 +107,7 @@ number
 
 </td><td>
 
-**_(BETA)_** Количество оставшихся попыток ввода кода
+Количество оставшихся попыток ввода кода
 
 
 </td></tr>
@@ -129,7 +126,7 @@ number
 
 </td><td>
 
-**_(BETA)_** Настройки канала
+Настройки канала
 
 
 </td></tr>
@@ -148,7 +145,7 @@ number
 
 </td><td>
 
-**_(BETA)_** Текущий статус канала
+Текущий статус канала
 
 
 </td></tr>
@@ -167,7 +164,7 @@ number
 
 </td><td>
 
-**_(BETA)_** Тип канала
+Тип канала
 
 
 </td></tr>

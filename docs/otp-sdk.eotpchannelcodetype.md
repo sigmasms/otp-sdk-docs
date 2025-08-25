@@ -4,9 +4,6 @@
 
 ## EOtpChannelCodeType enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Тип канала (кодовый или безкодовый) Относится только к первому запросу в канал т.к. тип может измениться во время запроса
 
 **Signature:**
@@ -45,8 +42,6 @@ code
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -60,8 +55,6 @@ codeless
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>

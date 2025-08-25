@@ -4,9 +4,6 @@
 
 ## SigmaOtpSDKEnvironmentEnum enum
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Режимы работы SDK
 
 **Signature:**
@@ -45,8 +42,6 @@ production
 
 </td><td>
 
-**_(BETA)_**
-
 
 </td></tr>
 <tr><td>
@@ -60,8 +55,6 @@ test
 
 
 </td><td>
-
-**_(BETA)_**
 
 
 </td></tr>

@@ -4,9 +4,6 @@
 
 ## BunJSRouteRegistry class
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Регистрация маршрутов для BunJS
 
 **Signature:**
@@ -61,7 +58,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Constructs a new instance of the `BunJSRouteRegistry` class
+Constructs a new instance of the `BunJSRouteRegistry` class
 
 
 </td></tr>
@@ -95,7 +92,6 @@ Description
 
 </td><td>
 
-**_(BETA)_**
 
 
 </td></tr>

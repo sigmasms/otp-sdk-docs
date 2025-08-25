@@ -4,9 +4,6 @@
 
 ## IGoogleCaptchaConfig interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Настройки каптчи google
 
 **Signature:**
@@ -53,7 +50,7 @@ number
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Минимальное значение score для recaptcha v3
+_(Optional)_ Минимальное значение score для recaptcha v3
 
 
 </td></tr>
@@ -72,7 +69,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Секретный ключ/токен от google captcha
+Секретный ключ/токен от google captcha
 
 
 </td></tr>

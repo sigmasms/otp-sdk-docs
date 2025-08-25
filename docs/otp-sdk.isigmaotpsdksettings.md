@@ -4,9 +4,6 @@
 
 ## ISigmaOtpSDKSettings interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Настройки SDK
 
 **Signature:**
@@ -53,7 +50,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Токен для доступа к api
+Токен для доступа к api
 
 
 </td></tr>
@@ -72,7 +69,7 @@ string
 
 </td><td>
 
-**_(BETA)_** URL для доступа к api
+URL для доступа к api
 
 
 </td></tr>
@@ -91,7 +88,7 @@ string
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Конфигурация для каптчи
+_(Optional)_ Конфигурация для каптчи
 
 
 </td></tr>
@@ -110,7 +107,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Окружение для работы или тестов
+Окружение для работы или тестов
 
 
 </td></tr>
@@ -129,7 +126,7 @@ string
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Возможность переопределить транспорт
+_(Optional)_ Возможность переопределить транспорт
 
 
 </td></tr>
@@ -148,7 +145,7 @@ string
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Простой логгер
+_(Optional)_ Простой логгер
 
 
 </td></tr>

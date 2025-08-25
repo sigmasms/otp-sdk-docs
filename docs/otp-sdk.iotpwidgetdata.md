@@ -4,9 +4,6 @@
 
 ## IOtpWidgetData interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Данные виджета
 
 **Signature:**
@@ -53,7 +50,7 @@ boolean
 
 </td><td>
 
-**_(BETA)_** Флаг, указывающий на необходимость каптчи
+Флаг, указывающий на необходимость каптчи
 
 
 </td></tr>
@@ -72,7 +69,7 @@ boolean
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Провайдер каптчи, если используется
+_(Optional)_ Провайдер каптчи, если используется
 
 
 </td></tr>
@@ -91,7 +88,7 @@ boolean
 
 </td><td>
 
-**_(BETA)_** Статус активности
+Статус активности
 
 
 </td></tr>
@@ -110,7 +107,7 @@ boolean
 
 </td><td>
 
-**_(BETA)_** Статус блокировки
+Статус блокировки
 
 
 </td></tr>
@@ -129,7 +126,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Название виджета
+Название виджета
 
 
 </td></tr>

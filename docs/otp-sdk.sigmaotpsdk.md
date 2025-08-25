@@ -4,9 +4,6 @@
 
 ## SigmaOtpSDK class
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Основной класс SDK
 
 **Signature:**
@@ -114,7 +111,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Constructs a new instance of the `SigmaOtpSDK` class
+Constructs a new instance of the `SigmaOtpSDK` class
 
 
 </td></tr>
@@ -148,7 +145,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Возвращает статус процесса аутентификации
+Возвращает статус процесса аутентификации
 
 
 </td></tr>
@@ -162,7 +159,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Проверяет статус процесса аутентификации и завершает его в случае успеха.
+Проверяет статус процесса аутентификации и завершает его в случае успеха.
 
 
 </td></tr>
@@ -176,7 +173,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Проверяет статус процесса аутентификации и завершает его в случае успеха.
+Проверяет статус процесса аутентификации и завершает его в случае успеха.
 
 
 </td></tr>
@@ -190,7 +187,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Возвращает текущий канал
+Возвращает текущий канал
 
 
 </td></tr>
@@ -204,7 +201,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Возвращает данные виджета
+Возвращает данные виджета
 
 
 </td></tr>
@@ -218,7 +215,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)
+Подписывается на событие [Exceptions.ChannelChangedException](./otp-sdk.exceptions.channelchangedexception.md)
 
 
 </td></tr>
@@ -232,7 +229,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие ошибки
+Подписывается на событие ошибки
 
 
 </td></tr>
@@ -246,7 +243,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
+Подписывается на событие [Exceptions.ResendChannelException](./otp-sdk.exceptions.resendchannelexception.md)
 
 
 </td></tr>
@@ -260,7 +257,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Подписывается на событие успешного подтверждения
+Подписывается на событие успешного подтверждения
 
 
 </td></tr>
@@ -274,7 +271,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Перезапуск текущего или запуск нового канала
+Перезапуск текущего или запуск нового канала
 
 
 </td></tr>
@@ -288,7 +285,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Запускает процесс аутентификации
+Запускает процесс аутентификации
 
 
 </td></tr>
@@ -302,7 +299,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Позволяет поменять apiToken во время работы
+Позволяет поменять apiToken во время работы
 
 
 </td></tr>
@@ -316,7 +313,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Проверяет код
+Проверяет код
 
 
 </td></tr>
@@ -330,7 +327,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Возвращает текущий канал после смены статуса на [EOtpHandlerChannelStatus.sent](./otp-sdk.eotphandlerchannelstatus.md)
+Возвращает текущий канал после смены статуса на [EOtpHandlerChannelStatus.sent](./otp-sdk.eotphandlerchannelstatus.md)
 
 
 </td></tr>
@@ -344,7 +341,7 @@ Description
 
 </td><td>
 
-**_(BETA)_** Ожидает успешный статус процесса аутентификации
+Ожидает успешный статус процесса аутентификации
 
 
 </td></tr>

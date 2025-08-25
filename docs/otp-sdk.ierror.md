@@ -4,9 +4,6 @@
 
 ## IError interface
 
-> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-> 
-
 Базовый интерфейс для исключений
 
 **Signature:**
@@ -53,7 +50,7 @@ string
 
 </td><td>
 
-**_(BETA)_** Сообщение об ошибке
+Сообщение об ошибке
 
 
 </td></tr>
@@ -72,7 +69,7 @@ unknown
 
 </td><td>
 
-**_(BETA)_** _(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
+_(Optional)_ Опциональная полезная нагрузка ошибки Может содержать дополнительную информацию об ошибке
 
 
 </td></tr>
@@ -91,7 +88,7 @@ unknown
 
 </td><td>
 
-**_(BETA)_** Тип ошибки
+Тип ошибки
 
 
 </td></tr>
