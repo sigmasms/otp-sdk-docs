@@ -6,7 +6,7 @@
 
 ```shell
 # You can also use wget
-curl -X POST http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/checkCode \
+curl -X POST http://online.sigmasms.ru/api/n/otp-handler/{requestId}/checkCode \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'

@@ -6,7 +6,7 @@
 
 ```shell
 # You can also use wget
-curl -X GET http://stage-online.sigmasms.ru/api/n/otp-handler/{requestId}/channel \
+curl -X GET http://online.sigmasms.ru/api/n/otp-handler/{requestId}/channel \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {access-token}'
 
