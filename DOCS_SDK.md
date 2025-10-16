@@ -22,7 +22,7 @@ import { SigmaOtpSDK, SigmaOtpSDKEnvironmentEnum, CaptchaProvider } from '@sigma
 const client = new SigmaOtpSDK({
   environment: SigmaOtpSDKEnvironmentEnum.production,
   apiToken: "your_api_token",
-  apiUrl: "https://online.sigmasms.ru",
+  apiUrl: "https://online.sigmasms.ru/api/n/otp-handler",
   // Опционально: настройки captcha
   captchaConfig: {
 	provider: CaptchaProvider.yandex
