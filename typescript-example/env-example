@@ -1,0 +1,15 @@
+# API токен SIGMA (обязательно)
+SIGMA_API_TOKEN=your_api_token_here
+
+# ID виджета (обязательно)
+WIDGET_ID=your_widget_id_here
+
+# Номер телефона для тестирования (обязательно)
+TEST_PHONE=+79001234567
+
+# IP адрес пользователя 
+USER_IP=127.0.0.1
+
+# URL API 
+SIGMA_API_URL=https://online.sigmasms.ru/api/n/otp-handler
+
