@@ -4,9 +4,9 @@
   <img src="https://sigmasms.ru/wp-content/uploads/2023/01/logo.svg">
 </p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/@sigmasms/otp-sdk"><img src="https://img.shields.io/npm/v/@sigmamessaging/otp-sdk.svg" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/@sigmasms/otp-sdk"><img src="https://img.shields.io/npm/dt/@sigmamessaging/otp-sdk.svg" alt="downloads total" /></a>
-  <a href="https://www.npmjs.com/package/@sigmasms/otp-sdk"><img src="https://img.shields.io/npm/dw/@sigmamessaging/otp-sdk.svg" alt="downloads week" /></a>
+  <a href="https://www.npmjs.com/package/@sigmamessaging/otp-sdk"><img src="https://img.shields.io/npm/v/@sigmamessaging/otp-sdk.svg" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@sigmamessaging/otp-sdk"><img src="https://img.shields.io/npm/dt/@sigmamessaging/otp-sdk.svg" alt="downloads total" /></a>
+  <a href="https://www.npmjs.com/package/@sigmamessaging/otp-sdk"><img src="https://img.shields.io/npm/dw/@sigmamessaging/otp-sdk.svg" alt="downloads week" /></a>
 </p>
 
 [Документация для пользователей и разработчиков](./DOCS_MAIN.md)
